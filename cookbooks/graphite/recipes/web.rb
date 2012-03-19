@@ -2,6 +2,7 @@ include_recipe "apache2::mod_python"
 
 package "python-cairo-dev"
 package "python-django"
+package "python-django-tagging"
 package "python-memcache"
 package "python-rrdtool"
 
