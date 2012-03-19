@@ -16,19 +16,6 @@ execute "untar graphite-web" do
   cwd "/usr/src"
 end
 
-remote_file "/usr/src/graphite-web-#{node.graphite.graphite_web.version}/webapp/graphite/storage.py.patch" do
-  source "http://launchpadlibrarian.net/65094495/storage.py.patch"
-  checksum "8bf57821"
-end
-
-package "patch"
-
-execute "patch graphite-web" do
-  command "patch storage.py storage.py.patch"
-  creates "/opt/graphite/webapp/graphite_web-#{node.graphite.graphite_web.version}-py2.6.egg-info"
-  cwd "/usr/src/graphite-web-#{node.graphite.graphite_web.version}/webapp/graphite"
-end
-
 execute "install graphite-web" do
   command "python setup.py install"
   creates "/opt/graphite/webapp/graphite_web-#{node.graphite.graphite_web.version}-py2.6.egg-info"

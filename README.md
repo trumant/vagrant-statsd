@@ -2,18 +2,9 @@ Vagrant + Chef config for a local statsd development box.
 
 # Installation
 
-* [Install VirtualBox](http://vagrantup.com/docs/getting-started/index.html)
-* Install deps
-
->    `bundle install --binstubs --path vendor/bundle`
-
-* Toss your hosted chef keys and knife config in `.chef`
-* Bring up the virtual machine
-
->    `./bin/vagrant box add lucid64 http://files.vagrantup.com/lucid64.box`  
->    `./bin/vagrant up`
-
-* [Voilà!](http://33.33.33.10/)
+* [Install VirtualBox and Vagrant](http://vagrantup.com/docs/getting-started/index.html)
+* vagrant up
+* [Voilà!](http://192.168.33.10/)
 
 ### Bonus features:
 
